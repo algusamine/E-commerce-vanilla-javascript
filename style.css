@@ -1,0 +1,149 @@
+
+header{
+    margin-top: 0%;
+    border-bottom: white 1px solid;
+    position: fixed;
+    width: 100%;
+    background-color:gray;
+}
+
+#logo,#home, #men, #women, #jewelry, #electronics{
+    color: white;
+    font-size: 100%;
+    margin-left: 4%;
+    width: 12%;
+    height: 50px;
+    display: inline-block;
+    justify-content: flex-start;
+}
+
+#home:hover, #men:hover, #women:hover, #jewelry:hover, #electronics:hover{
+    cursor: pointer;
+    font-size: 30px;
+}
+h1 i:hover {
+    color: gold;
+    font-size: 40px;
+    cursor: pointer;
+}
+
+/* main */
+.promo {
+   display: flex;
+   color: white;
+   justify-content: center;
+   padding-top: 10px;
+   font-size: 20px;
+}
+#promo{
+    background-color: gray;
+    height: 40px;
+}
+#background-img{
+    border: none;
+    padding-top: 20%;
+    background-image: url('./15NYMEN-FASHION-2-superJumbo.jpeg');
+    background-repeat: no-repeat;
+    max-height: 100%;
+    max-width: 100%;
+}
+#fresh{
+    color:white;
+    text-align: center;
+    font-size: 100px;
+    padding-top: 7%;
+    margin-left:10%;
+}
+.products {
+    color: white;
+    font-size: 17px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 5% 10%;
+}
+.pro-img{
+    height: 300px;
+    width: 300px;
+    margin: 20px
+}
+.pro-title{
+    margin-left: 20px;
+    padding-left: 10px;
+    padding-top: 10px;
+    width: 292px;
+    height: 70px;
+    background-color: gray;
+}
+.pro-price{
+    justify-content: center;
+    display: flex;
+    margin-top: -20px;
+    padding-left: 120px;
+    color: black;
+}
+.details{
+    display: none;
+    font-size: 20px;
+    padding-left: 20px;
+    color: black;
+}
+.full-star{
+    color: gold;
+}
+.far{
+    color: gray;
+}
+
+.far:hover{
+    color: gold;
+    cursor: pointer;
+}
+#reviews{
+    display: flex;
+    margin-left: 20px;
+    padding-top: 20px;
+    color: black;
+}
+.view-more, .fav-product{
+    width: 240px;
+    height: 30px;
+    font-size: 18px
+}
+.view-more{
+    margin-left: 20px;
+}
+
+.fav-product{
+    width: 62px;
+    color: gray;
+}
+
+.view-more:hover, .fav-product:hover{
+    cursor: pointer;
+    font-size: 22px
+}
+/* to toggle the heart and the bag color: */
+.full-heart{
+    color: red;
+}
+
+.pro-toggle-0{
+    display: block;
+    font-size: 20px;
+    padding-left: 20px;
+}
+.pro-toggle-1{
+    height: 1200px;
+    width: 70%;
+}
+.pro-toggle-2{
+    height: auto;
+    width: 595px; 
+    display: flex;
+    justify-content: center;
+    padding-top: 5px;
+    padding-bottom: 5px; 
+}
+.hidden{
+    display: none;
+}
