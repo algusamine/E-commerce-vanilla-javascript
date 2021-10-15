@@ -6,7 +6,14 @@ header{
     width: 100%;
     background-color:gray;
 }
-
+h1 i:hover {
+    color: gold;
+    font-size: 40px;
+    cursor: pointer;
+}
+h1 .far{
+    color: white;
+}
 #logo,#home, #men, #women, #jewelry, #electronics{
     color: white;
     font-size: 100%;
@@ -16,18 +23,10 @@ header{
     display: inline-block;
     justify-content: flex-start;
 }
-
 #home:hover, #men:hover, #women:hover, #jewelry:hover, #electronics:hover{
     cursor: pointer;
     font-size: 30px;
 }
-h1 i:hover {
-    color: gold;
-    font-size: 40px;
-    cursor: pointer;
-}
-
-/* main */
 .promo {
    display: flex;
    color: white;
@@ -42,7 +41,7 @@ h1 i:hover {
 #background-img{
     border: none;
     padding-top: 20%;
-    background-image: url('./15NYMEN-FASHION-2-superJumbo.jpeg');
+    background-image: url('15NYMEN-FASHION-2-superJumbo.jpeg');
     background-repeat: no-repeat;
     max-height: 100%;
     max-width: 100%;
@@ -67,12 +66,16 @@ h1 i:hover {
     margin: 20px
 }
 .pro-title{
+    color: black;
+    font-weight: 700;
+    line-height: normal;
+    font-family: 'Source Sans Pro', sans-serif;
     margin-left: 20px;
     padding-left: 10px;
     padding-top: 10px;
     width: 292px;
-    height: 70px;
-    background-color: gray;
+    height: 80px;
+    text-align: center;
 }
 .pro-price{
     justify-content: center;
@@ -83,9 +86,9 @@ h1 i:hover {
 }
 .details{
     display: none;
-    font-size: 20px;
     padding-left: 20px;
     color: black;
+    font-family: 'Source Sans Pro', sans-serif;
 }
 .full-star{
     color: gold;
@@ -93,7 +96,6 @@ h1 i:hover {
 .far{
     color: gray;
 }
-
 .far:hover{
     color: gold;
     cursor: pointer;
@@ -112,33 +114,29 @@ h1 i:hover {
 .view-more{
     margin-left: 20px;
 }
-
 .fav-product{
     width: 62px;
     color: gray;
 }
-
 .view-more:hover, .fav-product:hover{
     cursor: pointer;
     font-size: 22px
 }
-/* to toggle the heart and the bag color: */
 .full-heart{
     color: red;
 }
-
 .pro-toggle-0{
     display: block;
-    font-size: 20px;
+    font-size: 17px;
     padding-left: 20px;
 }
 .pro-toggle-1{
-    height: 1200px;
+    height: 800px;
     width: 70%;
 }
 .pro-toggle-2{
     height: auto;
-    width: 595px; 
+    width: 45%; 
     display: flex;
     justify-content: center;
     padding-top: 5px;
@@ -146,4 +144,7 @@ h1 i:hover {
 }
 .hidden{
     display: none;
+}
+.block{
+    display: block;
 }

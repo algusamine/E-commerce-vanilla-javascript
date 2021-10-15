@@ -10,11 +10,8 @@ function maySees(){
     });
 }
 function categories(products){
-    console.log(products)
-// get the unique data for the categories:
-    let cat = [...new Set(products.map(x => x.category))];
 // sort the data so it displays by product category:
-    sortCat = products.sort((a, b)=>{
+    let sortCat = products.sort((a, b)=>{
         if (a.category > b.category){
             return -1;
         } else if (a < b){
@@ -23,10 +20,21 @@ function categories(products){
             return 0
         }
     });
-    // console.log(sortCat)
+    console.log(sortCat)
+  
     sortCat.forEach(x => {
+    indivPro = document.createElement('div');
+    indivPro.className = x.id;
+    if(indivPro.className >= 15 && indivPro.className <= 20){
+        indivPro.className = 'women';
+    } else if (indivPro.className >= 1 && indivPro.className <= 4){
+        indivPro.className = 'men';
+    } else if (indivPro.className >= 5 && indivPro.className <= 8){
+        indivPro.className = 'jewelry';
+    } else {
+        indivPro.className = 'electronics';
+    };
 
-    let indivPro = document.createElement('div');
     let proImg = document.createElement('img');
     proImg.className = 'pro-img';
     proImg.src = x.image;
@@ -76,39 +84,51 @@ function categories(products){
         toggle.map(x => x.classList.toggle(`pro-toggle-${toggle.indexOf(x)}`))
     }
 
-    favProduct.addEventListener('click', e=> {
+    favProduct.addEventListener('click', e => {
         e.target.classList.toggle('full-heart');
-        console.log('click')
+    });
+})
+// filter data by category:
+
+    let women = document.querySelectorAll('.women');
+    let men = document.querySelectorAll('.men');
+    let jewelry = document.querySelectorAll('.jewelry');
+    let electronics = document.querySelectorAll('.electronics');
+
+    let otherPro1 = [];
+    otherPro1.push(men, jewelry, electronics);
+    document.querySelector('#women').addEventListener('click', ()=>{
+        otherPro1.map(x => x.forEach(y => y.className = 'hidden'));
+        women.forEach(x => x.className = 'block');
     });
 
-})
-}
-let sortCat = [];
+    let otherPro2 = [];
+    otherPro2.push(women, jewelry, electronics);
+    document.querySelector('#men').addEventListener('click', ()=>{
+        otherPro2.map(x => x.forEach(y => y.className = 'hidden'));
+        men.forEach(x => x.className = 'block');
+    });
+
+    let otherPro3 = [];
+    otherPro3.push(men, women, electronics);
+    document.querySelector('#jewelry').addEventListener('click', ()=>{
+        otherPro3.map(x => x.forEach(y => y.className = 'hidden'));
+        jewelry.forEach(x => x.className = 'block');
+    });
 
 
-//Filter by catogory: 
-let displayProducts = document.querySelector('.products');
-document.querySelector('#women').addEventListener('click', e => {
-    let women = e.target.textContent;
-    const filteredWomen = sortCat.filter(item => item.category.includes(women.toLowerCase()));
-    console.log(filteredWomen)
-    displayProducts.classList.toggle('hidden');
-    filteredWomen.forEach(x => {
-        
-    })
-})
-document.querySelector('#men').addEventListener('click', e => {
-    let men = e.target.textContent;
-    const filteredMen = sortCat.filter(item => item.category.includes(men.toLowerCase()));
-    console.log(filteredMen)
-})
-document.querySelector('#jewelry').addEventListener('click', e => {
-    let jewelry = e.target.textContent;
-    const filteredJewelry = sortCat.filter(item => item.category.includes(jewelry.toLowerCase()));
-    console.log(filteredJewelry)
-})
-document.querySelector('#electronics').addEventListener('click', e => {
-    let electronics = e.target.textContent;
-    const filteredElectronics = sortCat.filter(item => item.category.includes(electronics.toLowerCase()));
-    console.log(filteredElectronics)
-})
+    let otherPro4 = [];
+    otherPro4.push(men, women, jewelry);
+    document.querySelector('#electronics').addEventListener('click', ()=>{
+        otherPro4.map(x => x.forEach(y => y.className = 'hidden'));
+        electronics.forEach(x => x.className = 'block');
+    });
+
+    let allPro = [];
+    allPro.push(men, women, jewelry, electronics);
+    document.querySelector('#home').addEventListener('click', ()=>{
+        allPro.map(x => x.forEach(y => y.className = 'block'));
+    }); 
+
+};
+
